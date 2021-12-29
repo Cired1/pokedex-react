@@ -1,0 +1,33 @@
+.container-home {
+  padding-top: 2rem;
+
+  .pagination {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1rem;
+    margin: 1rem;
+
+    button {
+      min-width: 100px;
+      padding: 0.5rem;
+      font-weight: bold;
+      color: #fff;
+      background-color: rgb(220, 10, 45);
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .pagination {
+    flex-direction: column;
+    align-items: center;
+  }
+}
