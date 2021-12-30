@@ -4,6 +4,7 @@ import Loader from "../components/Loader";
 import PokemonPortrait from "../components/PokemonPortrait";
 import "./Pokemon.scss";
 import PokemonInfo from "../components/PokemonInfo";
+import FilterContainer from "../components/FilterContainer";
 
 const Pokemon = () => {
   const [pokemon, setPokemon] = useState({});
@@ -53,7 +54,9 @@ const Pokemon = () => {
             stats={pokemon.stats}
             description={pokemonSpecie.flavor_text_entries[0].flavor_text}
             captureRate={pokemonSpecie.capture_rate}
-            habitat={pokemonSpecie.habitat.name}
+            habitat={
+              pokemonSpecie.habitat ? pokemonSpecie.habitat.name : "No data"
+            }
             bgColor={pokemon.types[0].type.name}
           />
         </>

@@ -3,11 +3,10 @@ import "./Search.scss";
 import { useSearchParams } from "react-router-dom";
 import { useState } from "react";
 
-
-
 const Searchbar = () => {
+  /* const search = query.get("search"); */
   const [query, setQuery] = useSearchParams();
-  const [value, setValue] = useState("");
+  const [value, setValue] = useState("")
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -21,7 +20,8 @@ const Searchbar = () => {
         placeholder="Search pokemon..."
         value={value ?? ""}
         onChange={(e) => {
-          setValue(e.target.value);
+          const val = e.target.value;
+          setValue(val);
         }}
       />
       <FaSearch className="search-icon" />
